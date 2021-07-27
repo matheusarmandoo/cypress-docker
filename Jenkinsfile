@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build'){
             steps {
-                sh "npm install"
+                sh "npm install && npm run cucumber TAGS=$tags"
             }
         }
         stage('teste'){
